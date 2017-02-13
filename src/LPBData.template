@@ -1,0 +1,38 @@
+/*
+ Copyright 2014-2017 DISCO Open Source (https://discoos.org/)
+
+ This file is part of Ozi circle.
+ */
+
+/**
+ *
+ * @author Sven-Ove Bjerkan
+ * @author Jan Kåre Lokna
+ */
+public class LPBData {
+
+    private MissingCategory[] mcs = new MissingCategory[46];
+
+    public MissingCategory[] loadData() {
+        mcs[0] = null;
+        
+        /* Add dropdown-elements using this format:
+        mcs[1] = new MissingCategory("Element 1 in dropdown", 40, 300, 1000, 4000, 9000);
+        mcs[2] = new MissingCategory("Element 2 in dropdown", 431, 700, 3000, 5000, 11000);
+        
+        Explanation:
+        * The number in "mcs[X]" must be increased for each line
+        * The first parameter is a string that will be shown in the dropdown (like "Element 2 in dropdown")
+        * The second parameter is an integer, "n". This is the number of persons the stats are based on
+        * The third parameter is an integer, "R25". This is the number of meters for 25% in this category
+        * The forth parameter is an integer, "R50". This is the number of meters for 50% in this category
+        * The fifth parameter is an integer, "R75". This is the number of meters for 75% in this category
+        * The sixth parameter is an integer, "R95". This is the number of meters for 95% in this category
+        
+        Normally, these numbers would come from the "Lost Person Behavior"-book.
+        The statistics are copyright by the author of the book, and is not included here in the sourcecode for that reason.
+        */
+        
+        return mcs;
+    }
+}
